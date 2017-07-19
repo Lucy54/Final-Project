@@ -70,16 +70,16 @@ body { font-family: arial;
 
 <br/>
 
-<button class="button button1" onclick="document.getElementById('foshayDiv').style.display='block'"">Foshay</button>
+<button class="button button1" onclick="showTower('foshayDiv')">Foshay</button>
 <br/>
 <br/>
-<button class="button button2" onclick="document.getElementById('capellaDiv').style.display='block'"">Capella</button>
+<button class="button button2" onclick="showTower('capellaDiv')">Capella</button>
 <br/>
 <br/>
-<button class="button button3" onclick="document.getElementById('idsDiv').style.display='block'"">IDS</button>
+<button class="button button3" onclick="showTower('idsDiv')">IDS</button>
 <br/>
 <br/>
-<button class="button button4"onclick="document.getElementById('usbankDiv').style.display='block'"">US Bank Stadium</button>
+<button class="button button4"onclick="showTower('usbankDiv')">US Bank Stadium</button>
 
 
 
@@ -121,12 +121,22 @@ body { font-family: arial;
 	<p>
 	<h3>US BANK STADIUM</h3>
 	<ul>
-      <li></li>
-      <li></li>
+      <li>2017 Super Bowl will be held here</li>
+      <li>used to be called the "Metrodome"</li>
       <li>made in 2016</li>
     </ul>
 	</p>
 </div>
+<script type="text/javascript">
+	function showTower(show){
+		document.getElementById('capellaDiv').style.display='none';
+		document.getElementById('idsDiv').style.display='none';
+		document.getElementById('usbankDiv').style.display='none';
+		document.getElementById('foshayDiv').style.display='none';
 
+		document.getElementById(show).style.display='block';
+
+	}
+	</script>
 </body>
 </html>
