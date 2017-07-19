@@ -2,6 +2,9 @@
 <html>
 <head>
 <style>
+div{
+  font-family: arial;
+}
 .container {
     overflow: hidden;
     background-color: #333;
@@ -60,12 +63,14 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 </style>
 </head>
 <body>
 
 <div class="container">
   <a href="#home">Home</a>
+
 
   <div class="dropdown">
     <button class="dropbtn">Landmarks</button>
@@ -99,6 +104,29 @@
     </div>
   </div>
 </div>
+<br/>
+<br/>
+
+<div>
+  Welcome to our page!
+  <br/>
+  scroll around the map to see different areas of Minneapolis!
+</div>
+<br/>
+<div id="map" style="width:100%;height:400px;background:yellow" ></div>
+
+  <script>
+  function myMap() {
+  var mapOptions = {
+      center: new google.maps.LatLng (44.9774119,-93.5127994),
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4ppEyvcd76lAdY0D3NlkUxisrHN5eYRk&callback=myMap"></script>
 
 
 </body>
