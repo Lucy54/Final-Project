@@ -254,16 +254,133 @@ div{
 
   <script>
   function myMap() {
-  var mapOptions = {
-      center: new google.maps.LatLng (44.9774119,-93.5127994),
+    var mapOptions = {
+      center: new google.maps.LatLng (44.9762,-93.2686),
       zoom: 10,
       mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    myMarkers(map);
+
   }
-  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  function myMarkers(inputmap) {
+      var foshay ={lat: 44.9746, lng: -93.2720};
+
+      var contentFoshay=
+        '<div id="content"<p>Foshay Tower</p></div>';
+
+      var infowindow1 = new google.maps.InfoWindow({
+              content: contentFoshay
+            });
+
+
+      var marker1 = new google.maps.Marker({
+        position: foshay,
+        map:inputmap,
+        title: 'Foshay Tower'
+
+      });
+
+      marker1.addListener('click', function() {
+        infowindow1.open(inputmap,marker1);
+      });
+
+
+      var contentWalker=
+        '<div id="content2"<p>Walker Art Museum</p></div>';
+
+      var infowindow2 = new google.maps.InfoWindow({
+              content: contentWalker
+            });
+
+     var walker ={lat: 44.9685, lng: -93.2892};
+
+     var marker2 = new google.maps.Marker({
+         position: walker,
+         map:inputmap,
+         title: 'Walker Art'
+
+       });
+
+     marker2.addListener('click', function() {
+        infowindow2.open(inputmap,marker2);
+         });
+
+
+      var contentUSBank=
+           '<div id="content3"<p>US Bank Stadium</p></div>';
+
+      var infowindow3 = new google.maps.InfoWindow({
+                 content: contentUSBank
+               });
+
+      var USBank ={lat: 44.986656, lng: -93.258133};
+
+      var marker3 = new google.maps.Marker({
+            position: USBank,
+            map:inputmap,
+            title: 'US Bank Stadium'
+
+          });
+
+        marker3.addListener('click', function() {
+           infowindow3.open(inputmap,marker3);
+            });
+
+
+      var contentIDSTower=
+           '<div id="content4"<p>IDS Tower</p></div>';
+
+      var infowindow4 = new google.maps.InfoWindow({
+                 content: contentIDSTower
+               });
+
+      var IDSTower ={lat: 44.9761, lng: -93.2719};
+
+      var marker4 = new google.maps.Marker({
+            position: IDSTower,
+            map:inputmap,
+            title: 'IDS Tower'
+
+          });
+
+        marker4.addListener('click', function() {
+           infowindow4.open(inputmap,marker4);
+            });
+
+      var contentCapella=
+           '<div id="content5"<p>Capella Building</p></div>';
+
+      var infowindow5 = new google.maps.InfoWindow({
+                 content: contentCapella
+               });
+
+      var Capella ={lat: 44.9762, lng: -93.2686};
+
+      var marker5 = new google.maps.Marker({
+            position: Capella,
+            map:inputmap,
+            title: 'Capella Building'
+
+          });
+
+        marker5.addListener('click', function() {
+           infowindow5.open(inputmap,marker5);
+            });
+
+
+
+
+
+
+
   }
+
+
   </script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxuPVMoWTFdHgiayy_hGmZn0sqSz2En48&callback=myMap"></script>
 
 
   </body>
